@@ -51,7 +51,7 @@ export function TargetUsers() {
             className="text-4xl sm:text-5xl leading-tight tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
-            Built for Every<br />
+            Built for<br />
             <span style={{ color: 'var(--accent)' }}>the People Who Need It Most</span>
           </h2>
         </motion.div>
