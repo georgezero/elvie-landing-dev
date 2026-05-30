@@ -105,8 +105,8 @@ export function AgenticPlatform() {
             className="text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            ELVIE exposes the entire imaging workspace — viewer control, study navigation,
-            layout, window level, cine, and playbooks — as first-class tools for any AI agent.
+            ELVIE exposes the full imaging workspace as structured tools any AI agent can
+            call — viewer control, study navigation, window level, cine, layout, playbooks.
             Connect Claude, Codex, OpenClaw, Hermes, Pi, or any MCP-compatible agent and let
             it drive the PACS directly.
           </p>

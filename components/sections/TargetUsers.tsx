@@ -21,7 +21,7 @@ const users = [
   {
     role: 'Researcher',
     icon: FlaskConical,
-    description: 'Ingest structured findings, annotations, and AI outputs at scale. Build on a clinically-grounded intelligence layer with open APIs.',
+    description: 'Work with structured findings, annotations, and AI outputs at scale. ELVIE\'s open APIs provide a clinically-grounded foundation for research and model development.',
     capabilities: ['Structured finding export', 'Annotation pipelines', 'Multi-study ingestion', 'Open API access'],
     color: '#d97706',
   },
@@ -52,7 +52,7 @@ export function TargetUsers() {
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
             Built for Every<br />
-            <span style={{ color: 'var(--accent)' }}>Clinical Role</span>
+            <span style={{ color: 'var(--accent)' }}>the People Who Need It Most</span>
           </h2>
         </motion.div>
 

@@ -52,8 +52,8 @@ export function FinalCTA() {
             className="mt-6 text-xl leading-relaxed max-w-xl mx-auto"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            ELVIE is available for early access. Join clinical teams
-            building the next generation of AI-assisted radiology review.
+            ELVIE is in early access. Join the clinicians, radiologists,
+            and researchers building what comes next.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

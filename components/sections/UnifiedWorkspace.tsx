@@ -38,17 +38,17 @@ export function UnifiedWorkspace() {
               className="text-4xl sm:text-5xl leading-tight tracking-tight"
               style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
             >
-              Images, Reports,<br />Documents,{' '}
-              <span style={{ color: 'var(--accent)' }}>and AI</span><br />
-              Side by Side
+              Everything in<br />
+              <span style={{ color: 'var(--accent)' }}>One Place.</span><br />
+              Nothing Lost.
             </h2>
             <p
               className="mt-5 text-lg leading-relaxed"
               style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
             >
-              Stop context-switching. ELVIE brings native DICOM viewing, structured
-              report understanding, and AI-powered clinical reasoning into a single,
-              responsive workspace.
+              Stop context-switching. ELVIE puts native DICOM viewing, structured
+              report understanding, and AI-powered reasoning side by side — so the
+              full picture is always within reach.
             </p>
 
             <div className="mt-8 space-y-3">
@@ -124,7 +124,7 @@ function WorkspaceMockup({ theme }: { theme: string }) {
           className="text-xs flex-1 text-center"
           style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}
         >
-          ELVIE — Unified Clinical Workspace
+          ELVIE — Unified AI Workspace
         </span>
         <div className="flex items-center gap-1">
           <Zap size={10} style={{ color: 'var(--accent)' }} />

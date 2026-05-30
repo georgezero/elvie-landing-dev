@@ -81,8 +81,8 @@ export function ReportToImage() {
             className="mt-4 text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            Click any finding. ELVIE opens the right series at the right image,
-            with the anatomy highlighted — no manual searching.
+            Click any finding. ELVIE opens the exact series and image, with the
+            anatomy already in focus — no hunting, no guessing.
           </p>
         </motion.div>
 

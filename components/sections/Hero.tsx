@@ -58,15 +58,15 @@ export function Hero() {
               className="mt-6 text-lg leading-relaxed max-w-xl"
               style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
             >
-              Connect reports, images, documents, and AI in a single workspace.
-              ELVIE helps medical providers move from findings to understanding faster.
+              One workspace for imaging, reports, documents, and AI. ELVIE helps
+              medical providers get from findings to clinical understanding — faster.
             </p>
             <p
               className="mt-3 text-sm leading-relaxed max-w-xl"
               style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-body)' }}
             >
-              Connect Claude, Codex, OpenClaw, Hermes, Pi, or any MCP-compatible agent
-              to drive the viewer, navigate studies, and execute clinical workflows directly.
+              Connect any AI agent — Claude, Codex, OpenClaw, Hermes, Pi — directly to the
+              imaging workspace. Drive the viewer, navigate studies, run clinical workflows.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

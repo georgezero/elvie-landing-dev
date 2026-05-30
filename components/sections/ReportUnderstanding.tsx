@@ -61,15 +61,15 @@ export function ReportUnderstanding() {
             className="text-4xl sm:text-5xl leading-tight tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
-            From Raw Report<br />
-            to <span style={{ color: 'var(--accent)' }}>Structured Intelligence</span>
+            From Unstructured Report<br />
+            to <span style={{ color: 'var(--accent)' }}>Clinical Intelligence</span>
           </h2>
           <p
             className="mt-4 text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            Upload, paste, or OCR any radiology report. ELVIE extracts findings,
-            separates anatomy and disease, and creates structured navigation targets.
+            Upload, paste, or scan any radiology report. ELVIE extracts every finding,
+            maps anatomy and disease, and creates direct links to the images that matter.
           </p>
         </motion.div>
 

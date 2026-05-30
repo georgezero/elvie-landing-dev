@@ -58,15 +58,15 @@ export function FutureCapabilities() {
             className="text-4xl sm:text-5xl leading-tight tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
-            What&apos;s<br />
-            <span style={{ color: 'var(--accent)' }}>Coming Next</span>
+            The<br />
+            <span style={{ color: 'var(--accent)' }}>Roadmap</span>
           </h2>
           <p
             className="mt-4 text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            ELVIE is an evolving clinical intelligence agentic platform. These capabilities
-            are on the roadmap, being shaped by clinical feedback.
+            ELVIE is an evolving platform. These capabilities are in development,
+            shaped by feedback from the clinicians and researchers using it.
           </p>
         </motion.div>
 

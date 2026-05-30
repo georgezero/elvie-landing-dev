@@ -53,8 +53,8 @@ export function DesignPrinciples() {
             className="text-4xl sm:text-5xl leading-tight tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
-            How We Build<br />
-            <span style={{ color: 'var(--accent)' }}>Clinical Intelligence Agent</span>
+            The Principles<br />Behind<br />
+            <span style={{ color: 'var(--accent)' }}>ELVIE</span>
           </h2>
         </motion.div>
 

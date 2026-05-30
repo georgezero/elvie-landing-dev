@@ -94,8 +94,8 @@ export function AIChat() {
               className="mt-5 text-lg leading-relaxed"
               style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
             >
-              ELVIE&apos;s AI understands the full clinical context — not just the report text,
-              but the imaging, anatomy, and patient story behind each finding.
+              ELVIE&apos;s AI understands the full clinical picture — the report, the imaging,
+              the anatomy, the patient history. Every answer is grounded in what&apos;s actually there.
             </p>
 
             <div className="mt-8 space-y-3">
