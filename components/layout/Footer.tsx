@@ -16,7 +16,7 @@ export function Footer() {
               <path d="M8 14 L14 8 L20 14 L14 20 Z" fill="none" stroke="white" strokeWidth="2" strokeLinejoin="round" />
               <circle cx="14" cy="14" r="2.5" fill="white" />
             </svg>
-            <span className="text-sm font-semibold" style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}>
+            <span className="text-sm font-semibold" style={{ fontFamily: 'var(--nav-logo-font, var(--font-display))', color: 'var(--nav-logo-color, var(--text-primary))' }}>
               ELVIE
             </span>
             <span className="text-sm" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-body)' }}>
@@ -27,7 +27,7 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <ThemeSwitcher />
             <span className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-              © 2027 Elvie
+              © {new Date().getFullYear()} Elvie
             </span>
           </div>
         </div>

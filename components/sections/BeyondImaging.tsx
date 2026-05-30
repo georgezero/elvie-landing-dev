@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 import { useTheme } from '@/components/theme/ThemeProvider';
 
 const dataLayers = [
-  { label: 'CT Brain',         type: 'Imaging',    date: '2024-03-15', color: '#0891b2', active: true },
-  { label: 'MRI Brain',        type: 'Imaging',    date: '2023-11-02', color: '#0284c7', active: true },
-  { label: 'Radiology Report', type: 'Report',     date: '2024-03-15', color: '#7c3aed', active: true },
-  { label: 'Pathology',        type: 'Lab',        date: '2024-02-28', color: '#059669', active: true },
-  { label: 'CBC / Metabolic',  type: 'Lab',        date: '2024-03-10', color: '#10b981', active: true },
-  { label: 'Neurology Note',   type: 'Note',       date: '2024-03-18', color: '#d97706', active: true },
-  { label: 'AI Insights',      type: 'AI',         date: '2024-03-15', color: '#818cf8', active: true },
-  { label: 'Follow-up Study',  type: 'Future',     date: '2024-06-15', color: '#94a3b8', active: false },
+  { label: 'CT Brain',         type: 'Imaging',    date: '2026-03-15', color: '#0891b2', active: true },
+  { label: 'MRI Brain',        type: 'Imaging',    date: '2025-11-02', color: '#0284c7', active: true },
+  { label: 'Radiology Report', type: 'Report',     date: '2026-03-15', color: '#7c3aed', active: true },
+  { label: 'Pathology',        type: 'Lab',        date: '2026-02-28', color: '#059669', active: true },
+  { label: 'CBC / Metabolic',  type: 'Lab',        date: '2026-03-10', color: '#10b981', active: true },
+  { label: 'Neurology Note',   type: 'Note',       date: '2026-03-18', color: '#d97706', active: true },
+  { label: 'AI Insights',      type: 'AI',         date: '2026-03-15', color: '#818cf8', active: true },
+  { label: 'Follow-up Study',  type: 'Future',     date: '2026-09-15', color: '#94a3b8', active: false },
 ];
 
 export function BeyondImaging() {

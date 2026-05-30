@@ -173,7 +173,7 @@ function HeroBadge({ theme }: { theme: string }) {
         {{
           clinical: 'Clinical Intelligence Agent',
           command:  'On-Call Clinical Intelligence Agent',
-          atlas:    'The Clinical Intelligence Agent Network',
+          atlas:    'Signal — Clinical Intelligence Agent',
           shared:   'Built for Provider Collaboration',
           thermal:  'Thermal Imaging Intelligence',
           surgical: 'Surgical Precision Platform',

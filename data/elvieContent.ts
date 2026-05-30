@@ -9,6 +9,12 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
+    id: 'atlas',
+    label: 'Signal',
+    description: 'Clinical intelligence agent network',
+    tagline: 'Every signal, mapped and connected',
+  },
+  {
     id: 'command',
     label: 'On-Call',
     description: 'Radiology AI workstation aesthetic',
@@ -25,12 +31,6 @@ export const themes: Theme[] = [
     label: 'Clinical Dark',
     description: 'Dark Clinical Precision — night shift',
     tagline: 'Clinical authority, after dark',
-  },
-  {
-    id: 'atlas',
-    label: 'Signal Atlas',
-    description: 'Clinical intelligence agent network',
-    tagline: 'Every signal, mapped and connected',
   },
   {
     id: 'shared',

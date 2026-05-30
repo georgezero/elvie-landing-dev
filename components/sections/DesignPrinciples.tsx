@@ -74,8 +74,8 @@ export function DesignPrinciples() {
               }}
             >
               <div
-                className="text-3xl font-bold mb-3 opacity-20 group-hover:opacity-40 transition-opacity"
-                style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}
+                className="text-3xl font-bold mb-3 transition-opacity"
+                style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)', opacity: 'var(--principle-num-opacity, 0.22)' }}
               >
                 0{i + 1}
               </div>
