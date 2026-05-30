@@ -106,10 +106,9 @@ export function FinalCTA() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                { label: 'ISO DICOM',         sub: 'Native Browser' },
-                { label: 'HL7 FHIR R4',       sub: 'Standards Ready' },
-                { label: 'IHE DICOMweb',      sub: 'QIDO · WADO · STOW' },
-                { label: 'MCP Protocol',       sub: 'Agent Control' },
+                { label: 'DICOM',             sub: 'Native Browser' },
+                { label: 'FHIR HL7',          sub: 'Standards Ready' },
+                { label: 'MCP',               sub: 'Agent Control' },
                 { label: 'REST API',           sub: 'Open & Extensible' },
               ].map(tag => (
                 <span
