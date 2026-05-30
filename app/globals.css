@@ -321,13 +321,6 @@
   font-weight: 300 !important;
 }
 
-/* Signal: Bebas Neue has no bold variant — synthetic bold makes it fat; force 400 */
-[data-theme="signal"] h1,
-[data-theme="signal"] h2,
-[data-theme="signal"] h3,
-[data-theme="signal"] .font-display {
-  font-weight: 400 !important;
-}
 
 /* ─── Base styles ──────────────────────────────────────────────────────────── */
 html {
