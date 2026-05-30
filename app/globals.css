@@ -99,7 +99,7 @@
   --shadow-sm:         0 1px 4px rgba(0,0,0,0.5);
   --shadow-md:         0 6px 24px rgba(0,0,0,0.6);
   --shadow-lg:         0 24px 64px rgba(0,0,0,0.8);
-  --font-display:      'Bebas Neue', Impact, sans-serif;
+  --font-display:      'Bebas Neue', sans-serif;
   --font-body:         'Outfit', system-ui, sans-serif;
   --font-mono:         'JetBrains Mono', 'Courier New', monospace;
   --hero-bg:           radial-gradient(ellipse at 50% 35%, #1e1b4b 0%, #0f172a 45%, #030712 100%);
@@ -116,13 +116,14 @@
   --badge-text:        #a5b4fc;
   --grid-opacity:      0;
   --principle-num-opacity: 0.55;
-  --nav-logo-font:     'Bebas Neue', Impact, sans-serif;
+  --nav-logo-font:     'Bebas Neue', sans-serif;
   --nav-logo-color:    #0891b2;
   --nav-logo-weight:   400;
+  --nav-logo-tracking: 0.12em;
   font-synthesis:      none;
 }
 
-/* Signal: Bebas Neue is single-weight (400 only) — override any Tailwind weight utilities */
+/* Signal: Bebas Neue is single-weight — pin weight and restore editorial letter-spacing */
 [data-theme="signal"] h1,
 [data-theme="signal"] h2,
 [data-theme="signal"] h3,
@@ -130,6 +131,7 @@
 [data-theme="signal"] h5,
 [data-theme="signal"] h6 {
   font-weight: 400;
+  letter-spacing: 0.12em;
 }
 
 /* ─── Theme: Signal Atlas ───────────────────────────────────────────────────── */
