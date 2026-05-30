@@ -33,7 +33,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   if (!mounted) {
     return (
-      <div data-theme="clinical" style={{ opacity: 0 }}>
+      <div data-theme="command" style={{ opacity: 0 }}>
         {children}
       </div>
     );
