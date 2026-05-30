@@ -203,7 +203,7 @@ function HeroStats() {
       {stats.map(s => (
         <div key={s.value}>
           <div
-            className="text-2xl font-bold"
+            className="text-2xl"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--accent)' }}
           >
             {s.value}
