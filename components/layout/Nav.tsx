@@ -8,8 +8,8 @@ import { ThemeSwitcher } from '@/components/theme/ThemeSwitcher';
 const links = [
   { href: '#problem',   label: 'The Problem' },
   { href: '#workspace', label: 'AI Workspace' },
-  { href: '#agentic',   label: 'Agent Native' },
   { href: '#ai-chat',   label: 'Ask Anything' },
+  { href: '#agentic',   label: 'Agent Native' },
   { href: '#vision',    label: 'Patient Story' },
 ];
 
