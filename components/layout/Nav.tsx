@@ -66,7 +66,7 @@ export function Nav() {
               <LogoMark />
               <span
                 className="text-lg"
-                style={{ fontFamily: 'var(--nav-logo-font, var(--font-display))', fontWeight: 'var(--nav-logo-weight, 600)', letterSpacing: 'var(--nav-logo-tracking)', color: 'var(--nav-logo-color, var(--text-primary))' }}
+                style={{ fontFamily: 'var(--nav-logo-font, var(--font-display))', fontWeight: 'var(--nav-logo-weight, 600)', color: 'var(--nav-logo-color, var(--text-primary))' }}
               >
                 ELVIE
               </span>

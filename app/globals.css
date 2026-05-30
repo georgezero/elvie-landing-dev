@@ -119,7 +119,6 @@
   --nav-logo-font:     'Bebas Neue', sans-serif;
   --nav-logo-color:    #0891b2;
   --nav-logo-weight:   400;
-  --nav-logo-tracking: 0.12em;
   font-synthesis:      none;
 }
 
@@ -131,7 +130,6 @@
 [data-theme="signal"] h5,
 [data-theme="signal"] h6 {
   font-weight: 400;
-  letter-spacing: 0.12em;
 }
 
 /* ─── Theme: Signal Atlas ───────────────────────────────────────────────────── */
