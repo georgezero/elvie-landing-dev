@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Stethoscope, UserRound, FlaskConical } from 'lucide-react';
+import { Stethoscope, UserRound, FlaskConical, HeartPulse } from 'lucide-react';
 
 const users = [
   {
-    role: 'Radiologist',
-    icon: Stethoscope,
-    description: 'Navigate complex reports faster. Let AI surface key findings and open the right image at the right moment — without manual searching.',
-    capabilities: ['Finding extraction', 'Report-to-image navigation', 'Prior study comparison', 'Clinical correlation'],
-    color: '#0891b2',
+    role: 'Patient',
+    icon: HeartPulse,
+    description: 'Understand your imaging results in plain language. ELVIE translates complex radiology findings into clear explanations — so you arrive at every conversation with your care team already informed.',
+    capabilities: ['Plain-language report summaries', 'Audio explanations', 'Shared review with your physician', 'Know what questions to ask'],
+    color: '#e11d48',
   },
   {
     role: 'Medical Provider',
@@ -17,6 +17,13 @@ const users = [
     description: 'Understand imaging results without translation. Move from findings to clinical action with the full patient context in one workspace.',
     capabilities: ['Patient-friendly summaries', 'Cross-system context', 'AI chat Q&A', 'Longitudinal tracking'],
     color: '#4f46e5',
+  },
+  {
+    role: 'Radiologist',
+    icon: Stethoscope,
+    description: 'Navigate complex reports faster. Let AI surface key findings and open the right image at the right moment — without manual searching.',
+    capabilities: ['Finding extraction', 'Report-to-image navigation', 'Prior study comparison', 'Clinical correlation'],
+    color: '#0891b2',
   },
   {
     role: 'Researcher',
@@ -56,7 +63,7 @@ export function TargetUsers() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {users.map((user, i) => (
             <motion.div
               key={user.role}
