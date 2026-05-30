@@ -27,7 +27,7 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <ThemeSwitcher />
             <span className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-              © 2026 ELVIE
+              © 2027 Elvie
             </span>
           </div>
         </div>
