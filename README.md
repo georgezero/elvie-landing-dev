@@ -46,7 +46,7 @@ ELVIE viewer, so `elvie.ggg.ad/` redirects to `elvie.ggg.ad/landing/` and
 #### 1. Build the static export
 
 ```bash
-NEXT_PUBLIC_VIEWER_URL=/index.html npm run build
+NEXT_PUBLIC_BASE_PATH=/landing NEXT_PUBLIC_VIEWER_URL=/index.html npm run build
 ```
 
 This generates an `out/` directory. The `basePath: '/landing'` in
@@ -135,7 +135,7 @@ docker compose up -d viewer
 
 ```bash
 # In elvie-landing-dev:
-NEXT_PUBLIC_VIEWER_URL=/index.html npm run build
+NEXT_PUBLIC_BASE_PATH=/landing NEXT_PUBLIC_VIEWER_URL=/index.html npm run build
 rsync -av --delete out/ george@paui:~/Downloads/src/ai/agentpacs/elvie-landing-dev/out/
 ssh george@paui "cd ~/Downloads/src/ai/agentpacs/elvie-server && docker compose restart viewer"
 ```
