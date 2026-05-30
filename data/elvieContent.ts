@@ -1,4 +1,4 @@
-export type ThemeId = 'clinical' | 'command' | 'atlas' | 'shared';
+export type ThemeId = 'clinical' | 'command' | 'atlas' | 'shared' | 'thermal' | 'surgical' | 'oncall';
 
 export interface Theme {
   id: ThemeId;
@@ -9,21 +9,27 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
+    id: 'command',
+    label: 'On-Call',
+    description: 'Radiology AI workstation aesthetic',
+    tagline: 'Command-level imaging intelligence',
+  },
+  {
     id: 'clinical',
     label: 'Clinical Precision',
     description: 'Medical-device trust aesthetic',
     tagline: 'Built for the clinical enterprise',
   },
   {
-    id: 'command',
-    label: 'Dark Command',
-    description: 'Radiology AI workstation aesthetic',
-    tagline: 'Command-level imaging intelligence',
+    id: 'oncall',
+    label: 'Clinical Dark',
+    description: 'Dark Clinical Precision — night shift',
+    tagline: 'Clinical authority, after dark',
   },
   {
     id: 'atlas',
     label: 'Signal Atlas',
-    description: 'Clinical intelligence network',
+    description: 'Clinical intelligence agent network',
     tagline: 'Every signal, mapped and connected',
   },
   {
@@ -31,6 +37,18 @@ export const themes: Theme[] = [
     label: 'Shared Review',
     description: 'Collaborative clinical workspace',
     tagline: 'Understanding built together',
+  },
+  {
+    id: 'thermal',
+    label: 'Deep Tissue',
+    description: 'Thermal imaging aesthetic',
+    tagline: 'Heat maps the truth',
+  },
+  {
+    id: 'surgical',
+    label: 'Surgical',
+    description: 'Operating theatre precision',
+    tagline: 'Every detail, illuminated',
   },
 ];
 
@@ -95,7 +113,7 @@ export const targetUsers = [
     accent: 'cyan',
   },
   {
-    role: 'Clinician',
+    role: 'Medical Provider',
     description: 'Understand imaging results without translation. Move from findings to clinical action with full context.',
     icon: 'user-round',
     accent: 'indigo',
@@ -109,11 +127,11 @@ export const targetUsers = [
 ];
 
 export const designPrinciples = [
-  { title: 'Human-Centered',       description: 'AI assists; clinicians decide. Every workflow keeps the physician in control.' },
+  { title: 'Human-Centered',       description: 'AI assists; medical providers decide. Every workflow keeps the physician in control.' },
   { title: 'AI-Assisted',          description: 'Not AI-replaced. Intelligence that amplifies clinical judgment without replacing it.' },
   { title: 'Explainable',          description: 'Every finding has a source. Every navigation has a reason. No black boxes.' },
   { title: 'Incremental Adoption', description: 'Integrate with existing PACS, reports, and workflows. No rip-and-replace.' },
-  { title: 'Browser-First',        description: 'Full clinical intelligence workspace delivered in any modern browser. Zero install.' },
+  { title: 'Browser-First',        description: 'Full clinical intelligence agent delivered in any modern browser. Zero install.' },
   { title: 'Open & Extensible',    description: 'Built on open standards. Connect your data, your agents, your workflow.' },
 ];
 

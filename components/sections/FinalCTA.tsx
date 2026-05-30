@@ -41,7 +41,7 @@ export function FinalCTA() {
           </div>
 
           <h2
-            className="text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
             From Findings<br />
@@ -102,27 +102,41 @@ export function FinalCTA() {
               className="text-xs uppercase tracking-widest mb-6"
               style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}
             >
-              Built for clinical environments
+              Built for humans and their agents
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Browser-native DICOM',
-                'No install required',
-                'DICOMweb compatible',
-                'FHIR ready',
-                'Open API',
+                { label: 'ISO DICOM',         sub: 'Native Browser' },
+                { label: 'HL7 FHIR R4',       sub: 'Standards Ready' },
+                { label: 'IHE DICOMweb',      sub: 'QIDO · WADO · STOW' },
+                { label: 'MCP Protocol',       sub: 'Agent Control' },
+                { label: 'REST API',           sub: 'Open & Extensible' },
               ].map(tag => (
                 <span
-                  key={tag}
-                  className="text-xs px-3 py-1.5 rounded-full border"
+                  key={tag.label}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border"
                   style={{
                     background: 'var(--chip-bg)',
-                    borderColor: 'var(--chip-border)',
-                    color: 'var(--text-muted)',
+                    borderColor: 'var(--border-accent)',
                     fontFamily: 'var(--font-mono)',
                   }}
                 >
-                  {tag}
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style={{ flexShrink: 0 }}>
+                    <path d="M5 0.5L9.33 2.75V7.25L5 9.5L0.67 7.25V2.75L5 0.5Z"
+                      stroke="currentColor" strokeWidth="0.8" fill="none"
+                      style={{ color: 'var(--accent)', opacity: 0.7 }} />
+                    <path d="M3 5L4.5 6.5L7 3.5" stroke="currentColor" strokeWidth="0.9"
+                      strokeLinecap="round" strokeLinejoin="round"
+                      style={{ color: 'var(--accent)' }} />
+                  </svg>
+                  <span>
+                    <span className="block text-xs font-semibold leading-tight" style={{ color: 'var(--accent)' }}>
+                      {tag.label}
+                    </span>
+                    <span className="block text-xs leading-tight" style={{ color: 'var(--text-muted)', fontSize: '10px' }}>
+                      {tag.sub}
+                    </span>
+                  </span>
                 </span>
               ))}
             </div>

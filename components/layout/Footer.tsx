@@ -20,14 +20,14 @@ export function Footer() {
               ELVIE
             </span>
             <span className="text-sm" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-body)' }}>
-              — Clinical Intelligence Workspace
+              — Clinical Intelligence Agent
             </span>
           </div>
 
           <div className="flex items-center gap-6">
             <ThemeSwitcher />
             <span className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
-              © 2024 ELVIE
+              © 2026 ELVIE
             </span>
           </div>
         </div>

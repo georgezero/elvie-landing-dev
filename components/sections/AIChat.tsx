@@ -14,13 +14,13 @@ const PRESET_MESSAGES = [
 
 const RESPONSES: Record<string, { text: string; action?: string }> = {
   'What are the key findings?': {
-    text: 'Three primary findings identified:\n\n1. **Chronic infarct, left thalamus** — non-acute, correlates with reported memory symptoms\n2. **Mild periventricular white matter changes** — consistent with small vessel disease\n3. **No acute intracranial abnormality** — reassuring finding\n\nFinding #1 is most clinically significant.',
+    text: 'Three primary findings identified:\n\n1. Chronic infarct, left thalamus — non-acute, correlates with reported memory symptoms\n2. Mild periventricular white matter changes — consistent with small vessel disease\n3. No acute intracranial abnormality — reassuring finding\n\nFinding #1 is most clinically significant.',
   },
   'Which finding is most clinically important?': {
-    text: 'The **left thalamic infarct** warrants closest attention. It is non-acute (chronic phase) but clinically relevant given the patient\'s reported memory symptoms. Recommend:\n- Correlation with prior imaging for interval change\n- Neurology consultation\n- Cardiovascular risk factor review',
+    text: 'The left thalamic infarct warrants closest attention. It is non-acute (chronic phase) but clinically relevant given the reported memory symptoms. Recommend:\n— Correlation with prior imaging for interval change\n— Neurology consultation\n— Cardiovascular risk factor review',
   },
   'Show me the infarct finding.': {
-    text: 'Opening **Series 2, Image 19** — left thalamic region.\n\nThe hypodense area is visible on the DWI sequence. Viewer navigated to finding location.',
+    text: 'Opening Series 2, Image 19 — left thalamic region.\n\nThe hypodense area is visible on the DWI sequence. Viewer navigated to finding location.',
     action: 'navigate',
   },
   'Summarize this report for a patient.': {
@@ -40,7 +40,8 @@ export function AIChat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [typing, setTyping] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
-  const isDark = theme === 'command' || theme === 'atlas';
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const isDark = theme === 'command' || theme === 'atlas' || theme === 'thermal' || theme === 'surgical' || theme === 'oncall';
 
   const send = (text: string) => {
     if (typing) return;
@@ -55,7 +56,10 @@ export function AIChat() {
   };
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   }, [messages, typing]);
 
   return (
@@ -137,7 +141,7 @@ export function AIChat() {
               <div
                 className="flex items-center justify-between px-4 py-3 border-b"
                 style={{
-                  background: isDark ? '#040a14' : '#f8fafc',
+                  background: 'var(--bg-surface)',
                   borderColor: 'var(--border)',
                 }}
               >
@@ -161,8 +165,9 @@ export function AIChat() {
 
               {/* Messages */}
               <div
-                className="h-72 overflow-y-auto p-4 space-y-3"
-                style={{ background: isDark ? '#060c18' : '#ffffff' }}
+                ref={scrollContainerRef}
+                className="h-56 sm:h-72 overflow-y-auto p-4 space-y-3"
+                style={{ background: 'var(--bg-card)' }}
               >
                 {messages.length === 0 && (
                   <div className="h-full flex items-center justify-center">
@@ -193,7 +198,7 @@ export function AIChat() {
                           whiteSpace: 'pre-line',
                         }}
                       >
-                        {msg.text.replace(/\*\*(.*?)\*\*/g, '$1')}
+                        {msg.text}
                         {msg.action === 'navigate' && (
                           <div
                             className="mt-2 flex items-center gap-1.5 text-xs"
@@ -243,7 +248,7 @@ export function AIChat() {
               <div
                 className="flex items-center gap-2 p-3 border-t"
                 style={{
-                  background: isDark ? '#060c18' : '#f8fafc',
+                  background: 'var(--bg-surface)',
                   borderColor: 'var(--border)',
                 }}
               >

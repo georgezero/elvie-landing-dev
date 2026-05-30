@@ -16,7 +16,7 @@ const dataLayers = [
 
 export function BeyondImaging() {
   const { theme } = useTheme();
-  const isDark = theme === 'command' || theme === 'atlas';
+  const isDark = theme === 'command' || theme === 'atlas' || theme === 'thermal' || theme === 'surgical' || theme === 'oncall';
 
   return (
     <section
@@ -41,7 +41,7 @@ export function BeyondImaging() {
               {/* Header */}
               <div
                 className="px-5 py-3.5 border-b flex items-center justify-between"
-                style={{ background: isDark ? '#040a14' : '#f8fafc', borderColor: 'var(--border)' }}
+                style={{ background: 'var(--bg-surface)', borderColor: 'var(--border)' }}
               >
                 <div>
                   <p className="text-xs font-semibold" style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-body)' }}>
@@ -60,7 +60,7 @@ export function BeyondImaging() {
               </div>
 
               {/* Timeline */}
-              <div className="p-4 space-y-2" style={{ background: isDark ? '#06101e' : '#fff' }}>
+              <div className="p-4 space-y-2" style={{ background: 'var(--bg-card)' }}>
                 {dataLayers.map((layer, i) => (
                   <motion.div
                     key={layer.label}
@@ -156,7 +156,7 @@ export function BeyondImaging() {
                 style={{ color: 'var(--accent)', fontFamily: 'var(--font-body)' }}
               >
                 &ldquo;ELVIE is not just a PACS viewer and not just a chatbot.
-                It is a clinical intelligence layer that connects medical imaging
+                It is a clinical intelligence agent that connects medical imaging
                 with the rest of the patient story.&rdquo;
               </p>
             </div>

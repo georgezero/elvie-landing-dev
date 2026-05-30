@@ -27,7 +27,7 @@ const capabilities = [
   },
   {
     icon: MapPin,
-    title: 'Finding Localization',
+    title: 'Localization of Findings',
     description: 'Multimodal AI that links text descriptions directly to spatial locations in 3D anatomy — bridging language and imaging.',
     status: 'Experimental',
     statusColor: '#d97706',
@@ -65,7 +65,7 @@ export function FutureCapabilities() {
             className="mt-4 text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            ELVIE is an evolving clinical intelligence platform. These capabilities
+            ELVIE is an evolving clinical intelligence agentic platform. These capabilities
             are on the roadmap, being shaped by clinical feedback.
           </p>
         </motion.div>
@@ -79,7 +79,7 @@ export function FutureCapabilities() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -4, boxShadow: 'var(--shadow-lg)' }}
-              className="p-6 rounded-2xl border flex flex-col gap-4 cursor-default"
+              className="p-4 sm:p-6 rounded-2xl border flex flex-col gap-4 cursor-default"
               style={{
                 background: 'var(--bg-card)',
                 borderColor: 'var(--border)',

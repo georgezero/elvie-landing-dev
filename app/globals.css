@@ -1,5 +1,5 @@
 /* ─── Google Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Oswald:wght@300;400;500;600;700&family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
@@ -155,6 +155,128 @@
   --grid-opacity:      0;
 }
 
+/* ─── Theme: Deep Tissue (Thermal Imaging) ─────────────────────────────────── */
+[data-theme="thermal"] {
+  --bg-base:           #080609;
+  --bg-surface:        #100a0d;
+  --bg-surface-2:      #1a0f14;
+  --bg-card:           #140b10;
+  --bg-card-hover:     #1e1018;
+  --text-primary:      #fef0e8;
+  --text-secondary:    #c9a08a;
+  --text-muted:        #7a5040;
+  --accent:            #f97316;
+  --accent-soft:       rgba(249,115,22,0.1);
+  --accent-2:          #fbbf24;
+  --accent-alt:        #fb923c;
+  --border:            rgba(120,50,30,0.5);
+  --border-accent:     rgba(249,115,22,0.3);
+  --glow:              0 0 40px rgba(249,115,22,0.14), 0 0 80px rgba(249,115,22,0.05);
+  --shadow-sm:         0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:         0 6px 24px rgba(0,0,0,0.6);
+  --shadow-lg:         0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(249,115,22,0.07);
+  --font-display:      'Big Shoulders Display', Impact, sans-serif;
+  --font-body:         'Karla', system-ui, sans-serif;
+  --font-mono:         'JetBrains Mono', 'Courier New', monospace;
+  --hero-bg:           radial-gradient(ellipse at 35% 55%, #200a04 0%, #120608 45%, #080609 100%);
+  --section-divider:   rgba(120,50,30,0.5);
+  --chip-bg:           rgba(249,115,22,0.08);
+  --chip-border:       rgba(249,115,22,0.25);
+  --chip-text:         #f97316;
+  --status-bg:         rgba(251,191,36,0.07);
+  --status-text:       #fbbf24;
+  --status-border:     rgba(251,191,36,0.25);
+  --nav-bg:            rgba(8,6,9,0.92);
+  --nav-blur:          blur(16px);
+  --badge-bg:          rgba(249,115,22,0.08);
+  --badge-text:        #fb923c;
+  --grid-opacity:      0;
+}
+
+/* ─── Theme: Surgical (Operating Theatre) ──────────────────────────────────── */
+[data-theme="surgical"] {
+  --bg-base:           #070b08;
+  --bg-surface:        #0b1009;
+  --bg-surface-2:      #111810;
+  --bg-card:           #0e1510;
+  --bg-card-hover:     #131c14;
+  --text-primary:      #ecfce8;
+  --text-secondary:    #7db87a;
+  --text-muted:        #3d6b3a;
+  --accent:            #a3e635;
+  --accent-soft:       rgba(163,230,53,0.08);
+  --accent-2:          #4ade80;
+  --accent-alt:        #bef264;
+  --border:            rgba(40,80,35,0.6);
+  --border-accent:     rgba(163,230,53,0.25);
+  --glow:              0 0 40px rgba(163,230,53,0.1), 0 0 80px rgba(163,230,53,0.04);
+  --shadow-sm:         0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:         0 6px 24px rgba(0,0,0,0.65);
+  --shadow-lg:         0 20px 60px rgba(0,0,0,0.85), 0 0 40px rgba(163,230,53,0.05);
+  --font-display:      'Chakra Petch', 'Courier New', monospace;
+  --font-body:         'Barlow', system-ui, sans-serif;
+  --font-mono:         'JetBrains Mono', 'Courier New', monospace;
+  --hero-bg:           radial-gradient(ellipse at 50% 35%, #0c1e0a 0%, #080f07 50%, #070b08 100%);
+  --section-divider:   rgba(40,80,35,0.6);
+  --chip-bg:           rgba(163,230,53,0.07);
+  --chip-border:       rgba(163,230,53,0.22);
+  --chip-text:         #a3e635;
+  --status-bg:         rgba(74,222,128,0.07);
+  --status-text:       #4ade80;
+  --status-border:     rgba(74,222,128,0.25);
+  --nav-bg:            rgba(7,11,8,0.93);
+  --nav-blur:          blur(16px);
+  --badge-bg:          rgba(163,230,53,0.07);
+  --badge-text:        #bef264;
+  --grid-opacity:      0;
+}
+
+/* ─── Theme: On-Call (Dark Clinical Precision) ──────────────────────────────── */
+[data-theme="oncall"] {
+  --bg-base:           #0d1520;
+  --bg-surface:        #111e2d;
+  --bg-surface-2:      #162436;
+  --bg-card:           #162436;
+  --bg-card-hover:     #1a2c42;
+  --text-primary:      #dff0f7;
+  --text-secondary:    #7ea8c0;
+  --text-muted:        #567d94;
+  --accent:            #0891b2;
+  --accent-soft:       rgba(8,145,178,0.12);
+  --accent-2:          #0e7490;
+  --accent-alt:        #22d3ee;
+  --border:            rgba(14,116,144,0.3);
+  --border-accent:     rgba(8,145,178,0.35);
+  --glow:              0 0 40px rgba(8,145,178,0.1), 0 0 80px rgba(8,145,178,0.04);
+  --shadow-sm:         0 1px 4px rgba(0,0,0,0.4);
+  --shadow-md:         0 6px 24px rgba(0,0,0,0.5);
+  --shadow-lg:         0 20px 60px rgba(0,0,0,0.7), 0 0 40px rgba(8,145,178,0.06);
+  --font-display:      'Antonio', 'Oswald', Impact, sans-serif;
+  --font-body:         'DM Sans', system-ui, sans-serif;
+  --font-mono:         'JetBrains Mono', 'Courier New', monospace;
+  --hero-bg:           linear-gradient(160deg, #0d1520 0%, #0a1e2d 55%, #0d1f1a 100%);
+  --section-divider:   rgba(14,116,144,0.25);
+  --chip-bg:           rgba(8,145,178,0.1);
+  --chip-border:       rgba(8,145,178,0.28);
+  --chip-text:         #22d3ee;
+  --status-bg:         rgba(8,145,178,0.08);
+  --status-text:       #22d3ee;
+  --status-border:     rgba(8,145,178,0.3);
+  --nav-bg:            rgba(13,21,32,0.92);
+  --nav-blur:          blur(14px);
+  --badge-bg:          rgba(8,145,178,0.1);
+  --badge-text:        #22d3ee;
+  --grid-opacity:      0.18;
+}
+
+/* On-Call: Antonio at 300 — light condensed, overrides any font-bold utility class */
+[data-theme="oncall"] h1,
+[data-theme="oncall"] h2,
+[data-theme="oncall"] h3,
+[data-theme="oncall"] .font-display {
+  font-weight: 300 !important;
+}
+
 /* ─── Base styles ──────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
@@ -288,4 +410,17 @@ body {
 ::selection {
   background-color: var(--accent-soft);
   color: var(--text-primary);
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Improve tap targets on mobile */
+@media (max-width: 640px) {
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

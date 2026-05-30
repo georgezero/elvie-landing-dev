@@ -5,6 +5,7 @@ import { UnifiedWorkspace } from '@/components/sections/UnifiedWorkspace';
 import { ReportUnderstanding } from '@/components/sections/ReportUnderstanding';
 import { ReportToImage } from '@/components/sections/ReportToImage';
 import { AIChat } from '@/components/sections/AIChat';
+import { AgenticPlatform } from '@/components/sections/AgenticPlatform';
 import { BeyondImaging } from '@/components/sections/BeyondImaging';
 import { FutureCapabilities } from '@/components/sections/FutureCapabilities';
 import { TargetUsers } from '@/components/sections/TargetUsers';
@@ -22,6 +23,7 @@ export default function Home() {
       <ReportUnderstanding />
       <ReportToImage />
       <AIChat />
+      <AgenticPlatform />
       <BeyondImaging />
       <FutureCapabilities />
       <TargetUsers />

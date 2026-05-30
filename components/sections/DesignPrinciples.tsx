@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const principles = [
   {
     title: 'Human-Centered',
-    description: 'AI assists; clinicians decide. Every workflow keeps the physician in control of clinical judgment.',
+    description: 'AI assists; medical providers decide. Every workflow keeps the physician in control of clinical judgment.',
   },
   {
     title: 'AI-Assisted, Not AI-Replaced',
@@ -21,7 +21,7 @@ const principles = [
   },
   {
     title: 'Browser-First',
-    description: 'Full clinical intelligence workspace delivered in any modern browser. No install, no VPN, no proprietary hardware.',
+    description: 'Full clinical intelligence agent delivered in any modern browser. No install, no VPN, no proprietary hardware.',
   },
   {
     title: 'Open & Extensible',
@@ -54,7 +54,7 @@ export function DesignPrinciples() {
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
             How We Build<br />
-            <span style={{ color: 'var(--accent)' }}>Clinical Intelligence</span>
+            <span style={{ color: 'var(--accent)' }}>Clinical Intelligence Agent</span>
           </h2>
         </motion.div>
 

@@ -11,6 +11,9 @@ const themeAccents: Record<ThemeId, string> = {
   command:  '#00d4e8',
   atlas:    '#f59e0b',
   shared:   '#4f46e5',
+  thermal:  '#f97316',
+  surgical: '#a3e635',
+  oncall:   '#0891b2',
 };
 
 const themeDots: Record<ThemeId, string> = {
@@ -18,6 +21,9 @@ const themeDots: Record<ThemeId, string> = {
   command:  'bg-cyan-400',
   atlas:    'bg-amber-400',
   shared:   'bg-indigo-500',
+  thermal:  'bg-orange-500',
+  surgical: 'bg-lime-400',
+  oncall:   'bg-cyan-600',
 };
 
 export function ThemeSwitcher() {
@@ -63,7 +69,7 @@ export function ThemeSwitcher() {
           style={{ backgroundColor: themeAccents[theme] }}
         />
         <span className="hidden sm:inline">{current.label}</span>
-        <span className="sm:hidden">Theme</span>
+        <span className="sm:hidden">{current.label.split(' ')[0]}</span>
         <ChevronDown
           size={14}
           className="transition-transform"

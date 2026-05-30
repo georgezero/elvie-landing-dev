@@ -61,7 +61,7 @@ export function Problem() {
             className="mt-4 text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            Radiologists, clinicians, and researchers switch between eight or more
+            Radiologists, medical providers, and researchers switch between eight or more
             disconnected systems to understand a single patient's story.
             Critical context gets lost in translation.
           </p>
@@ -128,7 +128,7 @@ export function Problem() {
             className="flex items-center gap-3 px-6 py-3 rounded-full border text-sm font-medium"
             style={{ background: 'var(--accent-soft)', borderColor: 'var(--border-accent)', color: 'var(--accent)', fontFamily: 'var(--font-body)' }}
           >
-            ELVIE connects them all in one clinical intelligence workspace
+            ELVIE connects them all in one clinical intelligence agent
             <ArrowRight size={16} />
           </div>
         </motion.div>

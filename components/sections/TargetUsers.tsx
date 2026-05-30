@@ -12,7 +12,7 @@ const users = [
     color: '#0891b2',
   },
   {
-    role: 'Clinician',
+    role: 'Medical Provider',
     icon: UserRound,
     description: 'Understand imaging results without translation. Move from findings to clinical action with the full patient context in one workspace.',
     capabilities: ['Patient-friendly summaries', 'Cross-system context', 'AI chat Q&A', 'Longitudinal tracking'],

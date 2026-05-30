@@ -133,10 +133,10 @@ function WorkspaceMockup({ theme }: { theme: string }) {
       </div>
 
       {/* Three panels */}
-      <div className="flex h-64">
+      <div className="flex h-52 sm:h-64">
         {/* DICOM panel */}
         <div
-          className="flex-1 flex items-center justify-center relative"
+          className="flex-1 min-w-0 flex items-center justify-center relative"
           style={{ background: '#060a10', borderRight: '1px solid var(--border)' }}
         >
           <svg width="110" height="110" viewBox="0 0 110 110">
@@ -158,7 +158,7 @@ function WorkspaceMockup({ theme }: { theme: string }) {
 
         {/* Report panel */}
         <div
-          className="w-36 p-3 border-r overflow-hidden"
+          className="w-28 sm:w-36 p-2 sm:p-3 border-r overflow-hidden"
           style={{
             borderColor: 'var(--border)',
             background: isDark ? '#0a1628' : '#fff',
@@ -193,7 +193,7 @@ function WorkspaceMockup({ theme }: { theme: string }) {
 
         {/* AI panel */}
         <div
-          className="w-32 flex flex-col p-2"
+          className="w-24 sm:w-32 flex flex-col p-2"
           style={{ background: isDark ? '#080f1e' : '#f8fafc' }}
         >
           <p className="text-xs font-bold mb-2" style={{ color: 'var(--accent)', fontFamily: 'var(--font-mono)', fontSize: '8px', letterSpacing: '0.1em' }}>

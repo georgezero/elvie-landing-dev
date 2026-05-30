@@ -59,7 +59,14 @@ export function Hero() {
               style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
             >
               Connect reports, images, documents, and AI in a single workspace.
-              ELVIE helps clinicians move from findings to understanding faster.
+              ELVIE helps medical providers move from findings to understanding faster.
+            </p>
+            <p
+              className="mt-3 text-sm leading-relaxed max-w-xl"
+              style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-body)' }}
+            >
+              Connect Claude, Codex, OpenClaw, Hermes, Pi, or any MCP-compatible agent
+              to drive the viewer, navigate studies, and execute clinical workflows directly.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -91,7 +98,7 @@ export function Hero() {
               </a>
             </div>
 
-            <HeroStats theme={theme} />
+            <HeroStats />
           </motion.div>
 
           {/* Visual column */}
@@ -101,10 +108,12 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.25, ease: [0.4, 0, 0.2, 1] }}
             className="flex justify-center"
           >
-            {theme === 'clinical' && <ClinicalHeroVisual />}
+            {(theme === 'clinical' || theme === 'oncall') && <ClinicalHeroVisual />}
             {theme === 'command' && <CommandHeroVisual />}
             {theme === 'atlas'   && <AtlasHeroVisual />}
             {theme === 'shared'  && <SharedHeroVisual />}
+            {theme === 'thermal' && <ThermalHeroVisual />}
+            {theme === 'surgical' && <SurgicalHeroVisual />}
           </motion.div>
         </div>
       </div>
@@ -131,44 +140,63 @@ export function Hero() {
 
 /* ── Badge ─────────────────────────────────────────────────────────────── */
 function HeroBadge({ theme }: { theme: string }) {
-  const labels: Record<string, string> = {
-    clinical: 'Clinical Intelligence Workspace',
-    command:  'AI-Powered Radiology Platform',
-    atlas:    'The Clinical Intelligence Network',
-    shared:   'Built for Clinician Collaboration',
-  };
   return (
     <motion.div
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.05 }}
-      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border"
-      style={{
-        background: 'var(--badge-bg)',
-        borderColor: 'var(--border-accent)',
-        color: 'var(--badge-text)',
-        fontFamily: 'var(--font-mono)',
-      }}
+      className="flex flex-wrap gap-2"
     >
-      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--accent)' }} />
-      {labels[theme]}
+      {/* Agentic callout — primary badge */}
+      <span
+        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border"
+        style={{
+          background: 'var(--accent)',
+          borderColor: 'var(--accent)',
+          color: '#ffffff',
+          fontFamily: 'var(--font-mono)',
+        }}
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+        First Fully Agentic PACS Platform
+      </span>
+      {/* Theme descriptor */}
+      <span
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border"
+        style={{
+          background: 'var(--badge-bg)',
+          borderColor: 'var(--border-accent)',
+          color: 'var(--badge-text)',
+          fontFamily: 'var(--font-mono)',
+        }}
+      >
+        {{
+          clinical: 'Clinical Intelligence Agent',
+          command:  'On-Call Clinical Intelligence Agent',
+          atlas:    'The Clinical Intelligence Agent Network',
+          shared:   'Built for Provider Collaboration',
+          thermal:  'Thermal Imaging Intelligence',
+          surgical: 'Surgical Precision Platform',
+          oncall:   'Clinical Dark — Intelligence Agent',
+        }[theme]}
+      </span>
     </motion.div>
   );
 }
 
 /* ── Stats ─────────────────────────────────────────────────────────────── */
-function HeroStats({ theme }: { theme: string }) {
+function HeroStats() {
   const stats = [
-    { value: 'DICOM', label: 'Native' },
-    { value: 'AI', label: 'Report Chat' },
-    { value: 'OCR', label: 'Doc Ingestion' },
+    { value: '3.2M', label: 'Studies' },
+    { value: '750K', label: 'Patients' },
+    { value: '29K',  label: 'Providers' },
   ];
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.6 }}
-      className="mt-10 pt-8 border-t flex gap-8"
+      className="mt-10 pt-8 border-t flex flex-wrap gap-8"
       style={{ borderColor: 'var(--section-divider)' }}
     >
       {stats.map(s => (
@@ -181,7 +209,7 @@ function HeroStats({ theme }: { theme: string }) {
           </div>
           <div
             className="text-sm mt-0.5"
-            style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-body)' }}
+            style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
             {s.label}
           </div>
@@ -698,6 +726,158 @@ function SharedHeroVisual() {
             </div>
             <span className="text-xs" style={{ color: '#78716c', fontFamily: 'var(--font-mono)', fontSize: '9px' }}>In progress</span>
           </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   DEEP TISSUE HERO VISUAL — Thermal / Infrared imaging aesthetic
+   ══════════════════════════════════════════════════════════════════════════ */
+function ThermalHeroVisual() {
+  return (
+    <motion.div
+      className="w-full max-w-lg"
+      animate={{ y: [0, -5, 0] }}
+      transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut' }}
+      style={{ filter: 'drop-shadow(0 0 40px rgba(249,115,22,0.18))' }}
+    >
+      <div
+        className="rounded-2xl overflow-hidden border"
+        style={{ borderColor: 'rgba(249,115,22,0.2)', background: '#050304', boxShadow: '0 0 60px rgba(249,115,22,0.1), inset 0 1px 0 rgba(249,115,22,0.1)' }}
+      >
+        <div className="flex items-center justify-between px-4 py-2 border-b" style={{ background: '#080406', borderColor: 'rgba(249,115,22,0.15)' }}>
+          <div className="flex items-center gap-2">
+            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#f97316' }} />
+            <span className="text-xs font-mono" style={{ color: '#f97316', fontFamily: 'monospace', letterSpacing: '0.1em', fontSize: '10px' }}>
+              THERMAL · IR SCAN · ACTIVE
+            </span>
+          </div>
+          <div className="flex gap-2">
+            {['MAX 38.4°', 'MIN 34.1°', 'ΔT 4.3°'].map(s => (
+              <span key={s} className="text-xs px-1.5 py-0.5 rounded border font-mono"
+                style={{ borderColor: 'rgba(249,115,22,0.2)', color: '#f97316', background: 'rgba(249,115,22,0.06)', fontSize: '9px' }}>
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="relative flex" style={{ background: '#030204' }}>
+          <div className="flex-1 flex items-center justify-center py-6">
+            <svg width="200" height="180" viewBox="0 0 200 180">
+              <defs>
+                <radialGradient id="thermal-core" cx="45%" cy="52%" r="50%">
+                  <stop offset="0%"   stopColor="#fecaca" stopOpacity="1" />
+                  <stop offset="15%"  stopColor="#ef4444" stopOpacity="1" />
+                  <stop offset="30%"  stopColor="#f97316" stopOpacity="1" />
+                  <stop offset="45%"  stopColor="#f5c400" stopOpacity="1" />
+                  <stop offset="58%"  stopColor="#a8e010" stopOpacity="1" />
+                  <stop offset="70%"  stopColor="#08b5a0" stopOpacity="1" />
+                  <stop offset="82%"  stopColor="#0a6ebd" stopOpacity="1" />
+                  <stop offset="92%"  stopColor="#2d0a5e" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#1e0033" stopOpacity="1" />
+                </radialGradient>
+                <filter id="thermal-blur">
+                  <feGaussianBlur stdDeviation="3" />
+                </filter>
+              </defs>
+              <ellipse cx="100" cy="90" rx="78" ry="70" fill="url(#thermal-core)" filter="url(#thermal-blur)" />
+              <ellipse cx="100" cy="90" rx="78" ry="70" fill="url(#thermal-core)" opacity="0.7" />
+              <motion.ellipse cx="88" cy="88" rx="12" ry="10"
+                fill="#fecaca" opacity="0.6"
+                animate={{ opacity: [0.4, 0.9, 0.4] } as never}
+                transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+              />
+              <line x1="100" y1="10" x2="100" y2="170" stroke="rgba(249,115,22,0.15)" strokeWidth="0.5" />
+              <line x1="10" y1="90" x2="190" y2="90" stroke="rgba(249,115,22,0.15)" strokeWidth="0.5" />
+              <circle cx="88" cy="88" r="14" fill="none" stroke="#f97316" strokeWidth="1" strokeDasharray="3 2" opacity="0.8" />
+              <text x="106" y="80" fill="#f97316" fontSize="7" fontFamily="monospace">38.4°C</text>
+              <text x="106" y="89" fill="#fbbf24" fontSize="6.5" fontFamily="monospace">ANOMALY</text>
+            </svg>
+          </div>
+          <div className="flex flex-col items-center justify-center py-4 px-3 gap-0">
+            <span className="text-xs font-mono mb-1" style={{ color: '#f97316', fontSize: '8px' }}>°C</span>
+            <div style={{ width: '16px', height: '120px', background: 'linear-gradient(to bottom, #fecaca, #ef4444, #f97316, #f5c400, #a8e010, #08b5a0, #0a6ebd, #2d0a5e, #1e0033)', borderRadius: '3px' }} />
+          </div>
+        </div>
+        <div className="flex items-center justify-between px-4 py-2 border-t" style={{ background: '#080406', borderColor: 'rgba(249,115,22,0.12)' }}>
+          <span className="text-xs font-mono" style={{ color: '#7a5040', fontSize: '9px', fontFamily: 'monospace' }}>EMISSIVITY 0.98 · IR BAND 8–14μm</span>
+          <span className="text-xs font-mono" style={{ color: '#f97316', fontSize: '9px', fontFamily: 'monospace' }}>AI ANOMALY DETECTED ●</span>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SURGICAL HERO VISUAL — Operating theatre / bio-monitor aesthetic
+   ══════════════════════════════════════════════════════════════════════════ */
+function SurgicalHeroVisual() {
+  return (
+    <motion.div
+      className="w-full max-w-lg"
+      animate={{ y: [0, -5, 0] }}
+      transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+      style={{ filter: 'drop-shadow(0 0 40px rgba(163,230,53,0.15))' }}
+    >
+      <div
+        className="rounded-2xl overflow-hidden border"
+        style={{ borderColor: 'rgba(163,230,53,0.18)', background: '#040706', boxShadow: '0 0 60px rgba(163,230,53,0.06), inset 0 1px 0 rgba(163,230,53,0.08)' }}
+      >
+        <div className="flex items-center justify-between px-4 py-2 border-b" style={{ background: '#060908', borderColor: 'rgba(163,230,53,0.12)' }}>
+          <div className="flex items-center gap-2">
+            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#a3e635' }} />
+            <span className="text-xs" style={{ color: '#a3e635', fontFamily: "'Chakra Petch', monospace", letterSpacing: '0.12em', fontSize: '10px' }}>
+              ELVIE · SURGICAL VIEW · READY
+            </span>
+          </div>
+          <span className="text-xs font-mono" style={{ color: '#3d6b3a', fontSize: '9px' }}>SRG-04 · 09:42:17</span>
+        </div>
+        <div className="p-4" style={{ background: '#040706' }}>
+          <div className="relative rounded-lg overflow-hidden mb-3" style={{ background: '#060908', border: '1px solid rgba(163,230,53,0.12)' }}>
+            <svg width="100%" height="150" viewBox="0 0 360 150">
+              {Array.from({ length: 9 }, (_, i) => (
+                <line key={`v${i}`} x1={i * 40} y1="0" x2={i * 40} y2="150" stroke="rgba(163,230,53,0.05)" strokeWidth="0.5" />
+              ))}
+              {Array.from({ length: 4 }, (_, i) => (
+                <line key={`h${i}`} x1="0" y1={i * 40} x2="360" y2={i * 40} stroke="rgba(163,230,53,0.05)" strokeWidth="0.5" />
+              ))}
+              <ellipse cx="180" cy="75" rx="110" ry="55" fill="none" stroke="rgba(163,230,53,0.18)" strokeWidth="0.8" />
+              <ellipse cx="180" cy="75" rx="82" ry="40" fill="none" stroke="rgba(163,230,53,0.12)" strokeWidth="0.5" />
+              <rect x="162" y="62" width="28" height="22" rx="2" fill="rgba(163,230,53,0.06)" stroke="#a3e635" strokeWidth="0.8" />
+              <line x1="162" y1="73" x2="190" y2="73" stroke="rgba(163,230,53,0.3)" strokeWidth="0.5" />
+              <line x1="176" y1="62" x2="176" y2="84" stroke="rgba(163,230,53,0.3)" strokeWidth="0.5" />
+              {[[20,10],[340,10],[20,140],[340,140]].map(([x,y], i) => (
+                <g key={i}>
+                  <line x1={x} y1={y} x2={x+(i%2===0?12:-12)} y2={y} stroke="rgba(163,230,53,0.4)" strokeWidth="1" />
+                  <line x1={x} y1={y} x2={x} y2={y+(i<2?12:-12)} stroke="rgba(163,230,53,0.4)" strokeWidth="1" />
+                </g>
+              ))}
+              <text x="196" y="67" fill="#a3e635" fontSize="7" fontFamily="'Chakra Petch', monospace">ROI</text>
+              <text x="196" y="76" fill="#4ade80" fontSize="6" fontFamily="monospace">L.THAL</text>
+              <text x="196" y="84" fill="#3d6b3a" fontSize="6" fontFamily="monospace">S2/I19</text>
+            </svg>
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { label: 'SERIES', value: '2 / 8' },
+              { label: 'IMAGE',  value: '19 / 128' },
+              { label: 'STATUS', value: 'CHRONIC' },
+            ].map(r => (
+              <div key={r.label} className="px-2 py-1.5 rounded border" style={{ background: '#060908', borderColor: 'rgba(163,230,53,0.12)' }}>
+                <div className="text-xs mb-0.5" style={{ color: '#3d6b3a', fontFamily: "'Chakra Petch', monospace", fontSize: '8px', letterSpacing: '0.08em' }}>{r.label}</div>
+                <div className="text-sm font-semibold leading-none" style={{ color: '#a3e635', fontFamily: "'Chakra Petch', monospace" }}>{r.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-between px-4 py-2 border-t" style={{ background: '#060908', borderColor: 'rgba(163,230,53,0.1)' }}>
+          <span className="text-xs" style={{ color: '#3d6b3a', fontFamily: "'Chakra Petch', monospace", fontSize: '9px' }}>CT BRAIN WITH CONTRAST · AXIAL</span>
+          <motion.span className="text-xs" style={{ color: '#a3e635', fontFamily: "'Chakra Petch', monospace", fontSize: '9px' }}
+            animate={{ opacity: [1, 0.4, 1] }} transition={{ repeat: Infinity, duration: 1.5 }}>
+            AI ACTIVE
+          </motion.span>
         </div>
       </div>
     </motion.div>

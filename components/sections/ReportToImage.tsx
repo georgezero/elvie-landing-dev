@@ -206,7 +206,7 @@ export function ReportToImage() {
 
             {/* Viewer canvas */}
             <div
-              className="relative h-64 flex items-center justify-center"
+              className="relative h-48 sm:h-64 flex items-center justify-center"
               style={{ background: '#050a12' }}
             >
               <ViewerCanvas finding={findings[selected]} navigated={navigated} isDark={isDark} />
