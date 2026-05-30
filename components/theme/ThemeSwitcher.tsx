@@ -8,7 +8,7 @@ import { ChevronDown } from 'lucide-react';
 
 const themeAccents: Record<ThemeId, string> = {
   clinical: '#0891b2',
-  command:  '#00d4e8',
+  command:  '#0891b2',
   atlas:    '#f59e0b',
   shared:   '#4f46e5',
   thermal:  '#f97316',
