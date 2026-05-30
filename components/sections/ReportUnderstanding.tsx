@@ -1,15 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Upload, FileSearch, Brain, Target, ArrowRight } from 'lucide-react';
+import { FileSearch, Brain, Target, ArrowRight } from 'lucide-react';
 
 const steps = [
-  {
-    icon: Upload,
-    label: 'Upload / Paste / OCR',
-    desc: 'PDF, DOCX, scanned reports, or paste text directly',
-    color: '#0891b2',
-  },
   {
     icon: FileSearch,
     label: 'Finding Extraction',
@@ -68,8 +62,8 @@ export function ReportUnderstanding() {
             className="mt-4 text-lg leading-relaxed"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            Upload, paste, or scan any radiology report. ELVIE extracts every finding,
-            maps anatomy and disease, and creates direct links to the images that matter.
+            ELVIE extracts every finding, maps anatomy and disease, and creates direct
+            links to the images that matter.
           </p>
         </motion.div>
 
