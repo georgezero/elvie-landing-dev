@@ -58,7 +58,7 @@ export function FinalCTA() {
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
-              href="#"
+              href={process.env.NEXT_PUBLIC_VIEWER_URL ?? '#'}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all"
@@ -73,7 +73,7 @@ export function FinalCTA() {
               <ArrowRight size={18} />
             </motion.a>
             <motion.a
-              href="#"
+              href={process.env.NEXT_PUBLIC_VIEWER_URL ?? '#'}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base border transition-all"

@@ -89,7 +89,7 @@ export function Nav() {
             <div className="flex items-center gap-2 flex-shrink-0">
               <ThemeSwitcher />
               <a
-                href="#cta"
+                href={process.env.NEXT_PUBLIC_VIEWER_URL ?? '#cta'}
                 className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold transition-all hover:opacity-90 active:scale-95"
                 style={{
                   background: 'var(--accent)',
@@ -158,7 +158,7 @@ export function Nav() {
                 ))}
                 <div className="pt-2 pb-1 border-t mt-1" style={{ borderColor: 'var(--border)' }}>
                   <a
-                    href="#cta"
+                    href={process.env.NEXT_PUBLIC_VIEWER_URL ?? '#cta'}
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold"
                     style={{ background: 'var(--accent)', color: '#fff', fontFamily: 'var(--font-body)' }}

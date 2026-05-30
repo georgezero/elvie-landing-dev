@@ -71,7 +71,7 @@ export function Hero() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#cta"
+                href={process.env.NEXT_PUBLIC_VIEWER_URL ?? '#cta'}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:opacity-90 active:scale-95"
                 style={{
                   background: 'var(--accent)',
@@ -84,7 +84,7 @@ export function Hero() {
                 <ArrowRight size={16} />
               </a>
               <a
-                href="#cta"
+                href={process.env.NEXT_PUBLIC_VIEWER_URL ?? '#cta'}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm border transition-all hover:opacity-80 active:scale-95"
                 style={{
                   borderColor: 'var(--border-accent)',
