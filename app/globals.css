@@ -321,6 +321,14 @@
   font-weight: 300 !important;
 }
 
+/* Signal: Bebas Neue needs generous tracking at display sizes to avoid blocky/fat look */
+[data-theme="signal"] h1,
+[data-theme="signal"] h2,
+[data-theme="signal"] h3,
+[data-theme="signal"] .font-display {
+  letter-spacing: 0.12em !important;
+}
+
 /* ─── Base styles ──────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
