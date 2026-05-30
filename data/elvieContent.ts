@@ -1,4 +1,4 @@
-export type ThemeId = 'clinical' | 'command' | 'atlas' | 'shared' | 'thermal' | 'surgical' | 'oncall';
+export type ThemeId = 'clinical' | 'command' | 'atlas' | 'shared' | 'thermal' | 'surgical' | 'oncall' | 'signal';
 
 export interface Theme {
   id: ThemeId;
@@ -9,8 +9,14 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
-    id: 'atlas',
+    id: 'signal',
     label: 'Signal',
+    description: 'Bebas Neue editorial dark',
+    tagline: 'Every signal, mapped and connected',
+  },
+  {
+    id: 'atlas',
+    label: 'Signal Atlas',
     description: 'Clinical intelligence agent network',
     tagline: 'Every signal, mapped and connected',
   },

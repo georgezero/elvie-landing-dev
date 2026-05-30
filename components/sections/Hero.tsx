@@ -110,7 +110,7 @@ export function Hero() {
           >
             {(theme === 'clinical' || theme === 'oncall') && <ClinicalHeroVisual />}
             {theme === 'command' && <CommandHeroVisual />}
-            {theme === 'atlas'   && <AtlasHeroVisual />}
+            {(theme === 'atlas' || theme === 'signal') && <AtlasHeroVisual />}
             {theme === 'shared'  && <SharedHeroVisual />}
             {theme === 'thermal' && <ThermalHeroVisual />}
             {theme === 'surgical' && <SurgicalHeroVisual />}
@@ -173,7 +173,8 @@ function HeroBadge({ theme }: { theme: string }) {
         {{
           clinical: 'Clinical Intelligence Agent',
           command:  'On-Call Clinical Intelligence Agent',
-          atlas:    'Signal — Clinical Intelligence Agent',
+          signal:   'Signal — Clinical Intelligence Agent',
+          atlas:    'Signal Atlas — Clinical Intelligence Agent',
           shared:   'Built for Provider Collaboration',
           thermal:  'Thermal Imaging Intelligence',
           surgical: 'Surgical Precision Platform',

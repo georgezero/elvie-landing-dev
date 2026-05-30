@@ -16,7 +16,7 @@ const dataLayers = [
 
 export function BeyondImaging() {
   const { theme } = useTheme();
-  const isDark = theme === 'command' || theme === 'atlas' || theme === 'thermal' || theme === 'surgical' || theme === 'oncall';
+  const isDark = theme === 'command' || theme === 'atlas' || theme === 'thermal' || theme === 'surgical' || theme === 'oncall' || theme === 'signal';
 
   return (
     <section

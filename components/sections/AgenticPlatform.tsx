@@ -63,7 +63,7 @@ claude mcp add elvie --transport http \\
 
 export function AgenticPlatform() {
   const { theme } = useTheme();
-  const isDark = theme === 'command' || theme === 'atlas' || theme === 'thermal' || theme === 'surgical' || theme === 'oncall';
+  const isDark = theme === 'command' || theme === 'atlas' || theme === 'thermal' || theme === 'surgical' || theme === 'oncall' || theme === 'signal';
 
   return (
     <section

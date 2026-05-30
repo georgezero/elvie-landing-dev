@@ -14,12 +14,12 @@ const ThemeContext = createContext<ThemeContextValue>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<ThemeId>('atlas');
+  const [theme, setThemeState] = useState<ThemeId>('signal');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem('elvie-theme') as ThemeId | null;
-    const initial: ThemeId = stored ?? 'atlas';
+    const initial: ThemeId = stored ?? 'signal';
     setThemeState(initial);
     document.documentElement.setAttribute('data-theme', initial);
     setMounted(true);

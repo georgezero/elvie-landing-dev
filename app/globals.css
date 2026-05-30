@@ -79,6 +79,47 @@
   --grid-opacity:      0;
 }
 
+/* ─── Theme: Signal (Bebas Neue editorial) ──────────────────────────────────── */
+[data-theme="signal"] {
+  --bg-base:           #030712;
+  --bg-surface:        #080f1f;
+  --bg-surface-2:      #0f1729;
+  --bg-card:           #0f1729;
+  --bg-card-hover:     #131f35;
+  --text-primary:      #f1f5f9;
+  --text-secondary:    #94a3b8;
+  --text-muted:        #475569;
+  --accent:            #f59e0b;
+  --accent-soft:       rgba(245,158,11,0.1);
+  --accent-2:          #818cf8;
+  --accent-alt:        #fbbf24;
+  --border:            rgba(30,41,59,0.9);
+  --border-accent:     rgba(245,158,11,0.25);
+  --glow:              0 0 60px rgba(129,140,248,0.08);
+  --shadow-sm:         0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:         0 6px 24px rgba(0,0,0,0.6);
+  --shadow-lg:         0 24px 64px rgba(0,0,0,0.8);
+  --font-display:      'Bebas Neue', Impact, sans-serif;
+  --font-body:         'Outfit', system-ui, sans-serif;
+  --font-mono:         'JetBrains Mono', 'Courier New', monospace;
+  --hero-bg:           radial-gradient(ellipse at 50% 35%, #1e1b4b 0%, #0f172a 45%, #030712 100%);
+  --section-divider:   rgba(30,41,59,0.9);
+  --chip-bg:           rgba(245,158,11,0.08);
+  --chip-border:       rgba(245,158,11,0.25);
+  --chip-text:         #f59e0b;
+  --status-bg:         rgba(129,140,248,0.08);
+  --status-text:       #818cf8;
+  --status-border:     rgba(129,140,248,0.3);
+  --nav-bg:            rgba(3,7,18,0.9);
+  --nav-blur:          blur(16px);
+  --badge-bg:          rgba(129,140,248,0.1);
+  --badge-text:        #a5b4fc;
+  --grid-opacity:      0;
+  --principle-num-opacity: 0.55;
+  --nav-logo-font:     'Bebas Neue', Impact, sans-serif;
+  --nav-logo-color:    #0891b2;
+}
+
 /* ─── Theme: Signal Atlas ───────────────────────────────────────────────────── */
 [data-theme="atlas"] {
   --bg-base:           #030712;
@@ -115,9 +156,9 @@
   --badge-bg:          rgba(129,140,248,0.1);
   --badge-text:        #a5b4fc;
   --grid-opacity:      0;
-  --principle-num-opacity: 0.55;
-  --nav-logo-font:     'Bebas Neue', sans-serif;
-  --nav-logo-color:    #0891b2;
+  --principle-num-opacity: 0.45;
+  --nav-logo-font:     'Cormorant Garamond', Georgia, serif;
+  --nav-logo-color:    var(--text-primary);
 }
 
 /* ─── Theme: Shared Review ─────────────────────────────────────────────────── */

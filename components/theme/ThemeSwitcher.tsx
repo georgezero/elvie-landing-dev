@@ -7,6 +7,7 @@ import { useTheme } from './ThemeProvider';
 import { ChevronDown } from 'lucide-react';
 
 const themeAccents: Record<ThemeId, string> = {
+  signal:   '#f59e0b',
   clinical: '#0891b2',
   command:  '#0891b2',
   atlas:    '#f59e0b',
@@ -17,9 +18,10 @@ const themeAccents: Record<ThemeId, string> = {
 };
 
 const themeDots: Record<ThemeId, string> = {
+  signal:   'bg-amber-400',
   clinical: 'bg-cyan-500',
   command:  'bg-cyan-400',
-  atlas:    'bg-amber-400',
+  atlas:    'bg-amber-500',
   shared:   'bg-indigo-500',
   thermal:  'bg-orange-500',
   surgical: 'bg-lime-400',
