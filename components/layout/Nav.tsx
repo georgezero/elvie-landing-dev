@@ -65,8 +65,8 @@ export function Nav() {
             <a href="#" className="flex items-center gap-2.5 flex-shrink-0">
               <LogoMark />
               <span
-                className="text-lg font-semibold tracking-tight"
-                style={{ fontFamily: 'var(--nav-logo-font, var(--font-display))', color: 'var(--nav-logo-color, var(--text-primary))' }}
+                className="text-lg tracking-tight"
+                style={{ fontFamily: 'var(--nav-logo-font, var(--font-display))', fontWeight: 'var(--nav-logo-weight, 600)', color: 'var(--nav-logo-color, var(--text-primary))' }}
               >
                 ELVIE
               </span>

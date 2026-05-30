@@ -118,7 +118,18 @@
   --principle-num-opacity: 0.55;
   --nav-logo-font:     'Bebas Neue', Impact, sans-serif;
   --nav-logo-color:    #0891b2;
+  --nav-logo-weight:   400;
   font-synthesis:      none;
+}
+
+/* Signal: Bebas Neue is single-weight (400 only) — override any Tailwind weight utilities */
+[data-theme="signal"] h1,
+[data-theme="signal"] h2,
+[data-theme="signal"] h3,
+[data-theme="signal"] h4,
+[data-theme="signal"] h5,
+[data-theme="signal"] h6 {
+  font-weight: 400;
 }
 
 /* ─── Theme: Signal Atlas ───────────────────────────────────────────────────── */
