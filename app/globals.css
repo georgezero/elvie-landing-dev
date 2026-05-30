@@ -118,6 +118,7 @@
   --principle-num-opacity: 0.55;
   --nav-logo-font:     'Bebas Neue', Impact, sans-serif;
   --nav-logo-color:    #0891b2;
+  font-synthesis:      none;
 }
 
 /* ─── Theme: Signal Atlas ───────────────────────────────────────────────────── */
