@@ -66,7 +66,7 @@ export function FutureCapabilities() {
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
             ELVIE is an evolving platform. These capabilities are in development,
-            shaped by feedback from the clinicians and researchers using it.
+            shaped by feedback from the medical providers and researchers using it.
           </p>
         </motion.div>
 

@@ -52,7 +52,7 @@ export function FinalCTA() {
             className="mt-6 text-xl leading-relaxed max-w-xl mx-auto"
             style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-body)' }}
           >
-            ELVIE is in early access. Join the clinicians, radiologists,
+            ELVIE is in early access. Join the medical providers, radiologists,
             and researchers building what comes next.
           </p>
 

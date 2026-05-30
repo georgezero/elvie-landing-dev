@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'ELVIE — Medical Imaging Meets Clinical Intelligence',
-  description: 'ELVIE connects reports, images, documents, and AI in a single workspace so clinicians can move from findings to understanding faster.',
+  description: 'ELVIE connects reports, images, documents, and AI in a single workspace so medical providers can move from findings to understanding faster.',
   keywords: ['radiology', 'PACS', 'clinical intelligence', 'DICOM', 'AI', 'medical imaging'],
 };
 
