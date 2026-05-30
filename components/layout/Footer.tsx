@@ -12,7 +12,7 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2.5">
             <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-              <rect width="28" height="28" rx="7" fill="var(--accent)" />
+              <rect width="28" height="28" rx="7" fill="#0891b2" />
               <path d="M8 14 L14 8 L20 14 L14 20 Z" fill="none" stroke="white" strokeWidth="2" strokeLinejoin="round" />
               <circle cx="14" cy="14" r="2.5" fill="white" />
             </svg>
