@@ -74,8 +74,8 @@ export function ReportToImage() {
             className="text-4xl sm:text-5xl leading-tight tracking-tight"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
           >
-            From Finding Card<br />
-            to <span style={{ color: 'var(--accent)' }}>Exact Image</span>
+            Agentic Navigation<br />
+            of <span style={{ color: 'var(--accent)' }}>Imaging Findings</span>
           </h2>
           <p
             className="mt-4 text-lg leading-relaxed"

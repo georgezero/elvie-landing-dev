@@ -88,7 +88,7 @@ export function AIChat() {
               style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
             >
               Ask Anything.<br />
-              <span style={{ color: 'var(--accent)' }}>Navigate Anywhere.</span>
+              <span style={{ color: 'var(--accent)' }}>Get Informed Answers.</span>
             </h2>
             <p
               className="mt-5 text-lg leading-relaxed"
