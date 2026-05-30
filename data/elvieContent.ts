@@ -1,4 +1,4 @@
-export type ThemeId = 'clinical' | 'command' | 'atlas' | 'shared' | 'thermal' | 'surgical' | 'oncall' | 'signal';
+export type ThemeId = 'command' | 'clinical' | 'oncall' | 'atlas' | 'signal' | 'shared' | 'thermal' | 'surgical';
 
 export interface Theme {
   id: ThemeId;
@@ -9,22 +9,16 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
-    id: 'signal',
-    label: 'Signal',
-    description: 'Bebas Neue editorial dark',
-    tagline: 'Every signal, mapped and connected',
-  },
-  {
-    id: 'atlas',
-    label: 'Signal Atlas',
-    description: 'Clinical intelligence agent network',
-    tagline: 'Every signal, mapped and connected',
-  },
-  {
     id: 'command',
     label: 'On-Call',
     description: 'Radiology AI workstation aesthetic',
     tagline: 'Command-level imaging intelligence',
+  },
+  {
+    id: 'signal',
+    label: 'Signal',
+    description: 'Bebas Neue editorial dark',
+    tagline: 'Every signal, mapped and connected',
   },
   {
     id: 'clinical',
@@ -37,6 +31,12 @@ export const themes: Theme[] = [
     label: 'Clinical Dark',
     description: 'Dark Clinical Precision — night shift',
     tagline: 'Clinical authority, after dark',
+  },
+  {
+    id: 'atlas',
+    label: 'Signal Atlas',
+    description: 'Clinical intelligence agent network',
+    tagline: 'Every signal, mapped and connected',
   },
   {
     id: 'shared',
